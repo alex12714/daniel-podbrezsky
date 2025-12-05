@@ -9,9 +9,9 @@ const Projects = () => {
     <section id="projects" className="py-24 bg-black text-white">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center">
-          Featured Projects
+          Portfolio
         </h2>
-        <p className="text-gray-400 text-center mb-16 text-lg">Selected work showcasing my capabilities</p>
+        <p className="text-gray-400 text-center mb-16 text-lg">Real solutions delivering measurable results</p>
         
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
