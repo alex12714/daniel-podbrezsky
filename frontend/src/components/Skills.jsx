@@ -1,58 +1,49 @@
 import React from 'react';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
-import { skills } from '../mock';
+import { Card, CardContent } from './ui/card';
+import { expertise } from '../mock';
 import { Code, Database, Calendar, Globe, Search, Workflow } from 'lucide-react';
 
 const Skills = () => {
   const iconMap = {
-    'Software Development': Code,
-    'Database Management': Database,
-    'Event Organization': Calendar,
-    'Website Development': Globe,
-    'Market Research': Search,
-    'Business Automation': Workflow
+    'Code': Code,
+    'Database': Database,
+    'Calendar': Calendar,
+    'Globe': Globe,
+    'Search': Search,
+    'Workflow': Workflow
   };
 
   return (
     <section id="skills" className="py-24 bg-zinc-950 text-white">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center">
-          I Am The Best At:
+          Expertise
         </h2>
-        <p className="text-gray-400 text-center mb-16 text-lg">Expertise across multiple domains</p>
+        <p className="text-gray-400 text-center mb-16 text-lg">Solutions that drive your business forward</p>
         
-        <Accordion type="single" collapsible className="space-y-4">
-          {skills.map((skill) => {
-            const Icon = iconMap[skill.title];
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {expertise.map((item) => {
+            const Icon = iconMap[item.icon];
             return (
-              <AccordionItem 
-                key={skill.id} 
-                value={`item-${skill.id}`}
-                className="border border-zinc-800 rounded-lg overflow-hidden bg-black hover:border-[#E91E63] transition-all duration-300 hover:shadow-[0_0_25px_rgba(233,30,99,0.2)]"
+              <Card 
+                key={item.id}
+                className="bg-black border-zinc-800 hover:border-[#E91E63] transition-all duration-300 hover:shadow-[0_0_25px_rgba(233,30,99,0.3)] hover:-translate-y-2 group"
               >
-                <AccordionTrigger className="px-6 py-5 hover:no-underline text-left">
-                  <div className="flex items-center gap-4 w-full">
-                    {Icon && (
-                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#C2185B] to-[#E91E63] flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-6 w-6 text-white" />
-                      </div>
-                    )}
-                    <span className="text-xl font-semibold">{skill.title}</span>
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#C2185B] to-[#E91E63] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {Icon && <Icon className="h-7 w-7 text-white" />}
                   </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-5">
-                  <div className="pt-4 pl-16 space-y-3">
-                    <p className="text-gray-400">{skill.description}</p>
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-sm text-[#E91E63] font-semibold">Tools & Tech:</span>
-                      <span className="text-sm text-gray-300">{skill.tools}</span>
-                    </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-[#E91E63] transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {item.description}
+                  </p>
+                </CardContent>
+              </Card>
             );
           })}
-        </Accordion>
+        </div>
       </div>
     </section>
   );
