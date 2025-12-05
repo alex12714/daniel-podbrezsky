@@ -31,42 +31,42 @@ export const personalInfo = {
   ]
 };
 
-export const skills = [
+export const expertise = [
   {
     id: 1,
     title: "Software Development",
-    tools: "React, Node.js, Python, Java, TypeScript",
-    description: "Building scalable applications with modern frameworks and best practices"
+    description: "Custom applications built with modern frameworks. Scalable, maintainable code that grows with your business.",
+    icon: "Code"
   },
   {
     id: 2,
-    title: "Database Management",
-    tools: "MongoDB, PostgreSQL, MySQL, Redis",
-    description: "Designing efficient database architectures and optimizing query performance"
+    title: "Website Development",
+    description: "Beautiful, responsive websites that convert visitors into customers. Fast, SEO-optimized, and mobile-friendly.",
+    icon: "Globe"
   },
   {
     id: 3,
-    title: "Event Organization",
-    tools: "Project Management, Team Coordination, Logistics",
-    description: "Planning and executing successful events from concept to completion"
+    title: "Business Automation",
+    description: "Eliminate repetitive tasks and save time. Smart automation solutions that reduce costs and boost productivity.",
+    icon: "Workflow"
   },
   {
     id: 4,
-    title: "Website Development",
-    tools: "React, Next.js, Tailwind CSS, Responsive Design",
-    description: "Creating beautiful, fast, and user-friendly web experiences"
+    title: "Database Management",
+    description: "Robust data architecture and optimization. Secure, efficient database solutions for any scale.",
+    icon: "Database"
   },
   {
     id: 5,
     title: "Market Research",
-    tools: "Data Analysis, Competitive Intelligence, User Insights",
-    description: "Uncovering market opportunities through comprehensive research and analysis"
+    description: "Data-driven insights to guide your strategy. Comprehensive analysis that uncovers opportunities and reduces risk.",
+    icon: "Search"
   },
   {
     id: 6,
-    title: "Business Automation",
-    tools: "Process Optimization, API Integration, Workflow Design",
-    description: "Streamlining operations and reducing manual work through smart automation"
+    title: "Event Organization",
+    description: "Seamless event planning and execution. From corporate events to product launches, delivered flawlessly.",
+    icon: "Calendar"
   }
 ];
 
