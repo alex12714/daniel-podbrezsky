@@ -147,38 +147,23 @@ const Contact = () => {
               </Card>
             </div>
 
-            {/* QR Code */}
+            {/* VCF QR Code */}
             <Card className="bg-zinc-900 border-zinc-800 p-6 hover:border-[#E91E63] transition-all duration-300 group">
-              <h3 className="text-lg font-semibold mb-4 text-center">Scan to Connect</h3>
+              <h3 className="text-lg font-semibold mb-4 text-center">Scan to Save Contact</h3>
               <div className="bg-white p-6 rounded-lg group-hover:shadow-[0_0_40px_rgba(233,30,99,0.5)] transition-all duration-500">
-                <div className="aspect-square bg-zinc-200 rounded flex items-center justify-center">
-                  <svg viewBox="0 0 200 200" className="w-full h-full">
-                    {/* Simple QR code placeholder pattern */}
-                    <rect width="200" height="200" fill="white"/>
-                    <rect x="20" y="20" width="60" height="60" fill="black"/>
-                    <rect x="120" y="20" width="60" height="60" fill="black"/>
-                    <rect x="20" y="120" width="60" height="60" fill="black"/>
-                    <rect x="30" y="30" width="40" height="40" fill="white"/>
-                    <rect x="130" y="30" width="40" height="40" fill="white"/>
-                    <rect x="30" y="130" width="40" height="40" fill="white"/>
-                    <rect x="40" y="40" width="20" height="20" fill="black"/>
-                    <rect x="140" y="40" width="20" height="20" fill="black"/>
-                    <rect x="40" y="140" width="20" height="20" fill="black"/>
-                    {/* Pattern blocks */}
-                    <rect x="90" y="30" width="10" height="10" fill="black"/>
-                    <rect x="105" y="30" width="10" height="10" fill="black"/>
-                    <rect x="90" y="45" width="10" height="10" fill="black"/>
-                    <rect x="105" y="60" width="10" height="10" fill="black"/>
-                    <rect x="135" y="90" width="10" height="10" fill="black"/>
-                    <rect x="150" y="90" width="10" height="10" fill="black"/>
-                    <rect x="165" y="90" width="10" height="10" fill="black"/>
-                    <rect x="90" y="120" width="10" height="10" fill="black"/>
-                    <rect x="105" y="135" width="10" height="10" fill="black"/>
-                    <rect x="120" y="150" width="10" height="10" fill="black"/>
-                  </svg>
-                </div>
+                <img 
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(`BEGIN:VCARD
+VERSION:3.0
+FN:Daniel Podbrezsky
+TEL:${personalInfo.phone}
+EMAIL:${personalInfo.email}
+URL:https://${personalInfo.website}
+END:VCARD`)}`}
+                  alt="VCF QR Code"
+                  className="w-full h-full rounded"
+                />
               </div>
-              <p className="text-center text-gray-400 text-sm mt-4">Save contact information instantly</p>
+              <p className="text-center text-gray-400 text-sm mt-4">Scan to add contact to your phone</p>
             </Card>
           </div>
         </div>
