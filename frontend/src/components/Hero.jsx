@@ -39,19 +39,11 @@ const Hero = () => {
           {personalInfo.tagline}
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex justify-center items-center">
           <Button 
             size="lg"
-            className="bg-gradient-to-r from-[#C2185B] to-[#E91E63] hover:from-[#AD1457] hover:to-[#D81B60] text-white px-8 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(233,30,99,0.6)]"
-          >
-            <Download className="mr-2 h-5 w-5" />
-            Download CV
-          </Button>
-          <Button 
-            size="lg"
-            variant="outline"
             onClick={scrollToContact}
-            className="border-2 border-[#E91E63] text-white hover:bg-[#E91E63] hover:text-white px-8 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(233,30,99,0.4)]"
+            className="bg-gradient-to-r from-[#C2185B] to-[#E91E63] hover:from-[#AD1457] hover:to-[#D81B60] text-white px-8 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(233,30,99,0.6)]"
           >
             <Mail className="mr-2 h-5 w-5" />
             Contact Me
