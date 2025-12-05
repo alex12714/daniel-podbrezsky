@@ -2,16 +2,32 @@
 
 export const personalInfo = {
   name: "Daniel Podbrezsky",
-  tagline: "Results-driven, adaptable entrepreneur with rapid learning ability and a focus on high-quality problem solving",
+  tagline: "Transforming your business challenges into elegant digital solutions that drive growth and efficiency",
   email: "daniel@podbrezsky.com",
   phone: "+371 225 323 04",
   website: "daniel.podbrezsky.com",
-  bio: "I am a passionate problem solver with experience across software development, web solutions, business automation, market research, and event organization. I thrive in fast-paced environments, learn new skills rapidly, and deliver elegant solutions to complex challenges.",
-  quickFacts: [
-    { label: "Location", value: "Riga, Latvia" },
-    { label: "Languages", value: "English, Russian, Latvian" },
-    { label: "Experience", value: "8+ Years" },
-    { label: "Focus", value: "Innovation & Quality" }
+  bio: "Partner with a versatile technology expert who delivers results. With 8+ years of experience, I help businesses streamline operations, build powerful digital products, and achieve their goals through innovative solutions. From concept to launch, I'm committed to your success.",
+  whyWorkWithMe: [
+    { 
+      title: "Fast Turnaround", 
+      description: "Rapid development without compromising quality",
+      icon: "Zap"
+    },
+    { 
+      title: "Full-Stack Capability", 
+      description: "End-to-end solutions from one expert",
+      icon: "Layers"
+    },
+    { 
+      title: "Business-Focused", 
+      description: "Technology that serves your bottom line",
+      icon: "TrendingUp"
+    },
+    { 
+      title: "Proven Track Record", 
+      description: "8+ years delivering successful projects",
+      icon: "Award"
+    }
   ]
 };
 
