@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './ui/button';
-import { Download, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { personalInfo } from '../mock';
 
 const Hero = () => {
